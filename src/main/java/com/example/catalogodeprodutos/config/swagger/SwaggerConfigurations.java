@@ -20,15 +20,7 @@ public class SwaggerConfigurations {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.catalogodeprodutos"))
                 .paths(PathSelectors.ant("/**"))
-                .build()
-                .globalOperationParameters(Arrays.asList(
-                        new ParameterBuilder()
-                                .name("Authorization")
-                                .description("Header para token JWT")
-                                .modelRef(new ModelRef("string"))
-                                .parameterType("header")
-                                .required(false)
-                                .build()));
+                .build();
     }
 
 }
